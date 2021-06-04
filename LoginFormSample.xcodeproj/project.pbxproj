@@ -11,6 +11,7 @@
 		A8507ADD2669A1E40000B843 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8507ADC2669A1E40000B843 /* ContentView.swift */; };
 		A8507ADF2669A1E50000B843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8507ADE2669A1E50000B843 /* Assets.xcassets */; };
 		A8507AE22669A1E50000B843 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8507AE12669A1E50000B843 /* Preview Assets.xcassets */; };
+		A8507AEA2669A1F40000B843 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8507AE92669A1F40000B843 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		A8507ADE2669A1E50000B843 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8507AE12669A1E50000B843 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A8507AE32669A1E50000B843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8507AE92669A1F40000B843 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				A8507ADA2669A1E40000B843 /* LoginFormSampleApp.swift */,
 				A8507ADC2669A1E40000B843 /* ContentView.swift */,
+				A8507AE92669A1F40000B843 /* ViewModel.swift */,
 				A8507ADE2669A1E50000B843 /* Assets.xcassets */,
 				A8507AE32669A1E50000B843 /* Info.plist */,
 				A8507AE02669A1E50000B843 /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8507ADD2669A1E40000B843 /* ContentView.swift in Sources */,
+				A8507AEA2669A1F40000B843 /* ViewModel.swift in Sources */,
 				A8507ADB2669A1E40000B843 /* LoginFormSampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
