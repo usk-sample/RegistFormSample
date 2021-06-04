@@ -17,22 +17,30 @@ struct ContentView: View {
                 TextField.init("mail address", text: self.$viewModel.mail)                    .textContentType(.emailAddress)
                 if !self.viewModel.invalidMail.isEmpty {
                     Text(self.viewModel.invalidMail)
+                        .foregroundColor(.red)
+                        .font(.footnote)
                 }
   
-                TextField.init("password", text: self.$viewModel.pass)
+                SecureField.init("password", text: self.$viewModel.pass)
                     .textContentType(.newPassword)
-                TextField.init("retype password", text: self.$viewModel.retype)
+                SecureField.init("retype password", text: self.$viewModel.retype)
                     .textContentType(.newPassword)
+                if !self.viewModel.invalidPass.isEmpty {
+                    Text(self.viewModel.invalidPass)
+                        .foregroundColor(.red)
+                        .font(.footnote)
+                }
             }
             Button.init("Register") {
                 debugPrint("register")
             }.disabled(!self.viewModel.canSend)
+            .foregroundColor(.blue)
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: .init())        
     }
 }

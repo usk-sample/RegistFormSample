@@ -16,7 +16,8 @@ class ViewModel: ObservableObject {
     @Published var canSend = false
     
     @Published var invalidMail = ""
-    
+    @Published var invalidPass = ""
+
     private var subscriptions: Set<AnyCancellable> = .init()
     
     init() {
@@ -31,10 +32,13 @@ class ViewModel: ObservableObject {
             .map({ $0.allSatisfy{ $0 } })
             .assign(to: &$canSend)
         
-        mailValidation.sink { valid in
-            self.invalidMail = valid ? "" : "enter valid mail address"
-        }.store(in: &subscriptions)
+        $mail.map({ $0.isEmpty || $0.isValidEmail ? "" : "enter valid mail address" }).assign(to: &$invalidMail)
         
+        $pass.combineLatest($retype)
+            .filter({ !$0.1.isEmpty && !$0.1.isEmpty })
+            .map({ $0.0 == $0.1 ? "" : "must match password" })
+            .assign(to: &$invalidPass)
+                
     }
     
 }
