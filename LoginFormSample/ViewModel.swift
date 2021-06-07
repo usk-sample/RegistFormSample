@@ -13,8 +13,8 @@ class ViewModel: ObservableObject {
     @Published var mail = ""
     @Published var pass = ""
     @Published var retype = ""
-    @Published var canSend = false
     
+    @Published var canSend = false
     @Published var invalidMail = ""
     @Published var invalidPass = ""
 
