@@ -21,7 +21,7 @@ struct ContentView: View {
                         .foregroundColor(.red)
                         .font(.footnote)
                 }
-            }.textFieldStyle(RoundedBorderTextFieldStyle())
+            }
   
             Group {
                 SecureField.init("password", text: self.$viewModel.pass)
@@ -35,8 +35,7 @@ struct ContentView: View {
                         .foregroundColor(.red)
                         .font(.footnote)
                 }
-            }.textFieldStyle(RoundedBorderTextFieldStyle())
-
+            }
             
             Button("Register") {
                 debugPrint("register")
@@ -45,7 +44,8 @@ struct ContentView: View {
             
             Spacer()
             
-        }.padding()
+        }.padding()        
+        .textFieldStyle(RoundedBorderTextFieldStyle())
     }
 }
 
